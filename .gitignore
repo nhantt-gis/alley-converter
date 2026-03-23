@@ -1,0 +1,8 @@
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+output/*.gpkg
+output/*.geojson
+input/*.csv
+input/*.xlsx
