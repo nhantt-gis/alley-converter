@@ -27,6 +27,17 @@ pip install -r requirements.txt
 
 ### Windows
 
+#### Sử dụng Command Prompt
+
+```bash
+py -m venv .venv
+.venv\Scripts\activate.bat
+python -m pip install --upgrade pip
+pip install -r requirements.txt
+```
+
+#### Sử dụng PowerShell
+
 ```bash
 py -m venv .venv
 .venv\Scripts\Activate.ps1
