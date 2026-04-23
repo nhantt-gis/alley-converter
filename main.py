@@ -51,7 +51,7 @@ def build_parser() -> argparse.ArgumentParser:
         "-i",
         "--input",
         type=Path,
-        default=Path("input/data.xlsx"),
+        default=Path("input/data.csv"),
         metavar="FILE",
         help="Input Excel file path",
     )

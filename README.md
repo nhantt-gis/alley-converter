@@ -57,28 +57,28 @@ Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
 ### Linux / macOS
 
 ```bash
-# Chạy với default (input/data.xlsx -> output/data.gpkg)
+# Chạy với default (input/data.csv -> output/data.gpkg)
 python main.py
 
 # Truyền input/output tùy chỉnh
-python main.py -i path/to/input.xlsx -o path/to/output.gpkg
+python main.py -i path/to/input.csv -o path/to/output.gpkg
 ```
 
 ### Windows
 
 ```bash
-# Chạy với default (input\data.xlsx -> output\data.gpkg)
+# Chạy với default (input\data.csv -> output\data.gpkg)
 python main.py
 
 # Truyền input/output tùy chỉnh
-python main.py -i input\data.xlsx -o output\data.gpkg -l data
+python main.py -i input\data.csv -o output\data.gpkg -l data
 ```
 
 ## Tùy chọn
 
 | Flag             | Mặc định           | Mô tả                |
 | ---------------- | ------------------ | -------------------- |
-| `-i`, `--input`  | `input/data.xlsx`  | File Excel đầu vào   |
+| `-i`, `--input`  | `input/data.csv`  | File Excel đầu vào   |
 | `-o`, `--output` | `output/data.gpkg` | File GPKG đầu ra     |
 | `-l`, `--layer`  | `data`             | Tên layer trong GPKG |
 
