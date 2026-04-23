@@ -1,4 +1,4 @@
-"""Convert alley Excel data to GeoPackage (GPKG)."""
+"""Convert alley CSV data to GeoPackage (GPKG)."""
 
 import argparse
 import json
@@ -26,8 +26,8 @@ def parse_geometry(geojson_str: str):
 
 
 def convert(input_path: Path, output_path: Path, layer: str) -> int:
-    """Read Excel, convert geometry column, and write a GPKG file."""
-    df = pd.read_excel(input_path, dtype={INPUT_GEOMETRY_COLUMN: str})
+    """Read CSV, convert geometry column, and write a GPKG file."""
+    df = pd.read_csv(input_path, dtype={INPUT_GEOMETRY_COLUMN: str})
 
     if INPUT_GEOMETRY_COLUMN not in df.columns:
         raise ValueError(
@@ -44,7 +44,7 @@ def convert(input_path: Path, output_path: Path, layer: str) -> int:
 
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
-        description="Convert Excel to GeoPackage (GPKG).",
+        description="Convert CSV to GeoPackage (GPKG).",
         formatter_class=argparse.ArgumentDefaultsHelpFormatter,
     )
     parser.add_argument(
@@ -53,7 +53,7 @@ def build_parser() -> argparse.ArgumentParser:
         type=Path,
         default=Path("input/data.csv"),
         metavar="FILE",
-        help="Input Excel file path",
+        help="Input CSV file path",
     )
     parser.add_argument(
         "-o",

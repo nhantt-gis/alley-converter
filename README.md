@@ -1,8 +1,8 @@
 # Alley-converter
 
-Chuyển đổi dữ liệu từ Excel sang **GeoPackage (GPKG)**.
+Chuyển đổi dữ liệu từ CSV sang **GeoPackage (GPKG)**.
 
-- Đọc cột `geometry` trong file Excel
+- Đọc cột `geometry` trong file CSV
 - Parse GeoJSON string (hỗ trợ cả object `Feature` hoặc geometry object)
 - Xuất ra file `.gpkg` tương thích QGIS / ArcGIS
 
@@ -78,10 +78,10 @@ python main.py -i input\data.csv -o output\data.gpkg -l data
 
 | Flag             | Mặc định           | Mô tả                |
 | ---------------- | ------------------ | -------------------- |
-| `-i`, `--input`  | `input/data.csv`  | File Excel đầu vào   |
+| `-i`, `--input`  | `input/data.csv`  | File CSV đầu vào   |
 | `-o`, `--output` | `output/data.gpkg` | File GPKG đầu ra     |
 | `-l`, `--layer`  | `data`             | Tên layer trong GPKG |
 
 ## Yêu cầu dữ liệu đầu vào
 
-File Excel cần có cột `geometry` chứa GeoJSON hợp lệ.
+File CSV cần có cột `geometry` chứa GeoJSON hợp lệ.
