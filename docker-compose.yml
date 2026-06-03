@@ -1,0 +1,13 @@
+name: gtelmaps-alley-geodata-convert-tool
+
+services:
+  alley-converter:
+    build: .
+    image: 10.0.0.21:8082/gis/gtelmaps/gtelmaps-alley-geodata-convert-tool:0.1.0
+    volumes:
+      - ./data:/app/data
+    command:
+      - --input
+      - /app/data
+      - --output
+      - /app/data/data.gpkg
